@@ -1,36 +1,42 @@
+import { HeaderComponent } from './shared/navbar/header/header.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/shared/header/header.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
-import { NavComponent } from './components/shared/nav/nav.component';
-import { BookCartComponent } from './components/book-cart/book-cart.component';
-import { ProductListComponent } from './components/book-cart/product-list/product-list.component';
-import { FiltersComponent } from './components/book-cart/filters/filters.component';
-
-import { ProductItemComponent } from './components/book-cart/product-list/product-item/product-item.component';
-import { HttpClientModule } from '@angular/common/http';
-import {BooksService} from './components/book-cart/product-list/product-list.service';
+import { MatCommonModule } from '@angular/material/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { ProductCardComponent } from './pages/products/product-card/product-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
+    NavbarComponent,
     FooterComponent,
-    NavComponent,
-    BookCartComponent,
-    ProductListComponent,
-    FiltersComponent,
-    ProductItemComponent
+    ProductsComponent,
+    NavbarComponent,
+    HeaderComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCommonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
-  providers: [BooksService],
-  bootstrap: [AppComponent]
+  providers: [],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

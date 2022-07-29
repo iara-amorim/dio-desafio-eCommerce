@@ -1,0 +1,20 @@
+footer {
+  display: flex;
+  align-items: center;
+  background-color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  height: 40px;
+  color: #413f42;
+  position: sticky;
+  top: 100vh;
+  margin-top: 10px;
+}
+
+p {
+  margin: 50px;
+}
+
+a {
+  text-decoration: none;
+}

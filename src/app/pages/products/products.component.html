@@ -1,0 +1,16 @@
+<main class="products-container">
+  <section class="book-filter">
+    <mat-form-field appearance="fill">
+      <mat-label>Search here</mat-label>
+      <input matInput autofocus />
+    </mat-form-field>
+  </section>
+  <section class="book-list">
+    <div *ngIf="books.length === 0">
+      <h2>No products found.</h2>
+    </div>
+    <section *ngFor="let book of books">
+      <app-product-card [book]="book"></app-product-card>
+    </section>
+  </section>
+</main>

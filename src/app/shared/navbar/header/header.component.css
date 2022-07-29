@@ -1,0 +1,11 @@
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Ink Free", sans-serif;
+  font-size: 25px;
+  font-style: italic;
+}
+
+.logo-img {
+  width: 45px;
+}

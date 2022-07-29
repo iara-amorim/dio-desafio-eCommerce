@@ -1,0 +1,5 @@
+<div class="book-card">
+  <img [src]="book.cover" style="width: 100%" />
+  <p class="book-price">{{ book.price | currency: "BRL" }}</p>
+  <p><button>Add to Cart</button></p>
+</div>
